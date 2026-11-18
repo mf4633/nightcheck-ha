@@ -1,13 +1,15 @@
 {
   "domain": "night_check",
   "name": "Night Check",
-  "codeowners": [],
+  "codeowners": ["@mf4633"],
   "config_flow": true,
-  "dependencies": ["camera"],
+  "dependencies": [
+    "camera"
+  ],
   "documentation": "https://nightcheck.hydrocomplete.com/home-assistant",
   "integration_type": "service",
   "iot_class": "cloud_polling",
-  "issue_tracker": "https://nightcheck.hydrocomplete.com/support.html",
+  "issue_tracker": "https://github.com/mf4633/nightcheck-ha/issues",
   "requirements": [],
   "version": "0.1.0"
 }

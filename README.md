@@ -17,7 +17,7 @@ Night Check is a paid service with a free trial: sign up at
 
 ## Install
 
-1. In HACS, open the menu &rarr; **Custom repositories**, add this repository's URL as type **Integration**.
+1. In HACS, open the menu &rarr; **Custom repositories**, add `https://github.com/mf4633/nightcheck-ha` as type **Integration**.
 2. Install **Night Check** and restart Home Assistant.
 3. **Settings &rarr; Devices & services &rarr; Add integration &rarr; Night Check**, and paste your key.
 4. Open the integration's **Configure** and choose:
