@@ -1,0 +1,73 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Connect Night Check",
+        "description": "Paste the key from your Night Check sign-up. No key yet? Start a free trial at {signup_url}",
+        "data": { "api_key": "Night Check key" }
+      },
+      "reauth_confirm": {
+        "title": "New Night Check key",
+        "description": "Your Night Check key stopped working. Paste a new one; get one at {signup_url}",
+        "data": { "api_key": "Night Check key" }
+      },
+      "reconfigure": {
+        "title": "Change Night Check key",
+        "description": "Paste your new key. Get one at {signup_url}",
+        "data": { "api_key": "Night Check key" }
+      }
+    },
+    "error": {
+      "invalid_key": "That key isn't valid. Keys start with nc_.",
+      "cannot_connect": "Couldn't reach Night Check. Try again in a minute."
+    },
+    "abort": {
+      "already_configured": "Night Check is already set up.",
+      "reauth_successful": "Night Check is connected again.",
+      "reconfigure_successful": "Key changed."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Night Check",
+        "description": "Pick which cameras show the garage door, the gate and the bins (up to 6 in all). Bins are checked only on the evening before a pickup day.",
+        "data": {
+          "garage_cameras": "Cameras that show a garage door",
+          "gate_cameras": "Cameras that show a gate",
+          "bin_cameras": "Cameras that show the bins at the curb",
+          "check_time": "Check time",
+          "pickup_days": "Trash pickup days",
+          "notify_service": "Phone notification service (optional)",
+          "notify_when": "Send a notification"
+        },
+        "data_description": {
+          "notify_service": "For example mobile_app_my_phone (the part after notify.). Leave empty to use the sensor and your own automations."
+        }
+      }
+    },
+    "error": {
+      "too_many_cameras": "Choose 6 cameras or fewer.",
+      "unknown_notify": "There's no notify service with that name."
+    }
+  },
+  "selector": {
+    "weekday": {
+      "options": { "mon": "Monday", "tue": "Tuesday", "wed": "Wednesday", "thu": "Thursday", "fri": "Friday", "sat": "Saturday", "sun": "Sunday" }
+    },
+    "notify_when": {
+      "options": { "problems": "Only when something needs a look or couldn't be checked", "always": "Every night, including all clear" }
+    }
+  },
+  "entity": {
+    "sensor": {
+      "result": {
+        "name": "Result",
+        "state": { "ok": "All clear", "attention": "Needs a look", "unknown": "Couldn't check", "inactive": "Subscription inactive" }
+      },
+      "last_check": { "name": "Last check" }
+    },
+    "binary_sensor": { "needs_attention": { "name": "Needs attention" } },
+    "button": { "check_now": { "name": "Check now" } }
+  }
+}
